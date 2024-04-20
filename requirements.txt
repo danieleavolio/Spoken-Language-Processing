@@ -1,0 +1,15 @@
+# import numpy as np
+# from IPython.display import Audio
+# from matplotlib import pyplot as plt
+# import librosa
+# import librosa.display
+
+# import scipy.signal as sig
+# from scipy.fft import fft
+# import math
+
+numpy
+IPython
+matplotlib
+librosa
+scipy
