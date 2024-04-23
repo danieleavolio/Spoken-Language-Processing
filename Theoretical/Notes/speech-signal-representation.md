@@ -116,7 +116,6 @@ Discrete time fourier series is used to represent a periodic discrete signal as 
 [Discrete Fourier Series (DFS)](#discrete-fourier-series)
 
 $$
-
 \tilde x(n) \rightarrow_{DFS} X(k) = \sum_{n=0}^{N-1}\tilde x(n)e^{-j2\pi kn/N}
 $$
 
