@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  18 MAY 2024 19:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  18 MAY 2024 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -384,11 +384,7 @@ Package color Info: Driver file: pdftex.def on input line 149.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 16.
  (C:\Users\danie\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-) (g23_avolio_rodrigues.aux
-
-LaTeX Warning: Label `tab:metrics' multiply defined.
-
-)
+) (g23_avolio_rodrigues.aux)
 \openout1 = `g23_avolio_rodrigues.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -471,6 +467,11 @@ Underfull \hbox (badness 7168) in paragraph at lines 56--58
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 59.
 
+
+Underfull \hbox (badness 1173) in paragraph at lines 61--62
+\OT1/ptm/m/n/9 X-vectors, de-rived from deep neu-ral net-works trained for
+ []
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -479,8 +480,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 1173) in paragraph at lines 61--77
-\OT1/ptm/m/n/9 X-vectors, de-rived from deep neu-ral net-works trained for
+Overfull \hbox (10.8013pt too wide) in paragraph at lines 65--79
+ [][] 
  []
 
 [2] (g23_avolio_rodrigues.aux)
@@ -488,18 +489,14 @@ Underfull \hbox (badness 1173) in paragraph at lines 61--77
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `g23_avolio_rodrigues.out' has not changed.
 (rerunfilecheck)             Checksum: 20B992321F884CF3DB7BC1572778456B;2562.
  ) 
 Here is how much of TeX's memory you used:
- 17158 strings out of 475503
- 328817 string characters out of 5771650
+ 17159 strings out of 475503
+ 328832 string characters out of 5771650
  1938248 words of memory out of 5000000
- 38191 multiletter control sequences out of 15000+600000
+ 38192 multiletter control sequences out of 15000+600000
  576444 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,9n,107p,742b,899s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -540,7 +537,7 @@ pdfTeX warning (dest): name{section.2} has been referenced but does not exist, r
 pdfTeX warning (dest): name{section.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on g23_avolio_rodrigues.pdf (2 pages, 64615 bytes).
+Output written on g23_avolio_rodrigues.pdf (2 pages, 67339 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  13 named destinations out of 1000 (max. 500000)

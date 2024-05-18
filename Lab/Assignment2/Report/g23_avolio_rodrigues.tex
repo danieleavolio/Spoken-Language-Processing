@@ -58,22 +58,31 @@ In this section, we explore two approaches to NLI using pre-trained models: x-ve
 
 \subsubsection{X-vector Based Approach}
 
-X-vectors, derived from deep neural networks trained for speaker identification, have emerged as powerful embeddings for various speech processing tasks. In this section, we delve into the process of extracting x-vectors from audio data using pre-trained models. We demonstrate how to train a simple linear SVM classifier on top of these embeddings and evaluate its performance on a development set. Additionally, we experiment with alternative models like RandomForest, GradientBoosting, Logistic Regression, and KNN. The x-vector based approach yielded promising results on the development set:
-\begin{table}[htbp]
+X-vectors, derived from deep neural networks trained for speaker identification, have emerged as powerful embeddings for various speech processing tasks. In this section, we delve into the process of extracting x-vectors from audio data using pre-trained models. We demonstrate how to train a simple linear SVM classifier on top of these embeddings and evaluate its performance on a development set. Additionally, we experiment with alternative models like RandomForest, GradientBoosting, Logistic Regression, and KNN. The x-vector based approach yielded promising results on the development set.
+
+\begin{table}[h!]
   \centering
-  \caption{Language Classification Metrics}
-    \begin{tabular}{lccc}
-    \toprule
-    Language & Precision (\%) & Recall (\%) & F1-score (\%) \\
-    \midrule
-    CHI   & 58 & 85 & 69 \\
-    GER   & 62 & 48 & 54 \\
-    HIN   & 90 & 94 & 92 \\
-    ITA   & 72 & 57 & 63 \\
-    \bottomrule
-    \end{tabular}%
-  \label{tab:metrics}%
-\end{table}%
+  \begin{tabular}{lcccc}
+  \hline
+   & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+  \hline
+  \textbf{CHI} & 0.76 & 0.87 & 0.81 & 39 \\
+  \textbf{GER} & 0.72 & 0.64 & 0.67 & 44 \\
+  \textbf{HIN} & 0.96 & 0.94 & 0.95 & 47 \\
+  \textbf{ITA} & 0.70 & 0.70 & 0.70 & 46 \\
+  \hline
+  \textbf{Accuracy} &  &  & 0.78 & 176 \\
+  \textbf{Macro Avg} & 0.78 & 0.78 & 0.78 & 176 \\
+  \textbf{Weighted Avg} & 0.78 & 0.78 & 0.78 & 176 \\
+  \hline
+  \end{tabular}
+  \caption{Precision, Recall, F1-Score and Support for different languages}
+  \label{table:metrics}
+  \end{table}
+
+The best model was the Logistic Regression, with an overall score of 0.87. Compared to the GMM model, the x-vector based approach achieved a significant improvement in accuracy, precision, recall, and F1-score metrics.
+Note that this was the best result obtained using the transformation function \textbf{spkrec-ecapa-voxceleb} that should perform worse than \textbf{lang-id-voxlingua107-ecapa}.
+
 \subsection{Self-Supervised Learning (SSL) Approach}
 The s3prl toolkit offers a suite of self-supervised pre-trained models for speech processing tasks. In this section, we explore how to leverage SSL models for NLI by fine-tuning them on our dataset. We discuss the downstream task setup and the architecture of the simple model used for NLI. Furthermore, we provide instructions for running scripts to utilize SSL models and save results for evaluation.
 The SSL approach using the s3prl toolkit provided competitive results:
@@ -95,6 +104,8 @@ The SSL approach using the s3prl toolkit provided competitive results:
   \label{tab:metrics}%
 \end{table}%
 
+However we had some problems to run this, because I couldn't get this to work on Windows (I tried to run it on WSL, but it didn't work) and I don't know why. Unfortunately, I didn't have time to try to do more tests so we just kept the results we got from the lab when we did manage to run it throug Eduardo's computer.
+
 \section{Conclusion}
 The conclusion of this study highlights the evolution and diversity of approaches to native language identification, which are essential for a wide range of applications in human-computer interaction, language processing, and security.
 
@@ -104,6 +115,5 @@ Preliminary results reveal that the use of x-vectors and SSL models results in p
 
 The flexibility offered by modern approaches, such as the use of pre-trained models and self-supervised learning techniques, opens up new opportunities to improve native language identification systems, providing greater precision and adaptability to different application scenarios.
 
-Therefore, this study highlights the importance of continuous innovation and the adaptation of advanced techniques to improve the accuracy and effectiveness of native language identification systems, thus contributing to a significant advance in human-computer interaction and language processing.
-
+A very important note is that we did all our tests only on the \textbf{train100} datasets due to time constraints. We believe that the results could be improved by using the \textbf{train} datasets, but we did not have time to do it.
 \end{document}

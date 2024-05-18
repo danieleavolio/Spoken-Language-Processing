@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1716058524 "d:/Lovaion/University/2nd Year/Erasmus/Spoken Language Processing/Lab/Assignment2/Report/g23_avolio_rodrigues.tex" "g23_avolio_rodrigues.pdf" "g23_avolio_rodrigues" 1716058527 0
+["pdflatex"] 1716060806 "d:/Lovaion/University/2nd Year/Erasmus/Spoken Language Processing/Lab/Assignment2/Report/g23_avolio_rodrigues.tex" "g23_avolio_rodrigues.pdf" "g23_avolio_rodrigues" 1716060807 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458477487 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb7t.tfm" 1136772254 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -122,10 +122,10 @@
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/translations/dicts/translations-basic-dictionary-english.trsl" 1644052122 5588 0c1628daf15f4411ff1f463114c634a3 ""
   "C:/Users/danie/AppData/Roaming/MiKTeX/tex/latex/translations/translations.sty" 1644052122 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "Interspeech2024.cls" 1716054730 13782 4d3f45736409618d326e6558ad12756e ""
-  "d:/Lovaion/University/2nd Year/Erasmus/Spoken Language Processing/Lab/Assignment2/Report/g23_avolio_rodrigues.tex" 1716058523 9124 59b20f9a9928a832c451cb7b46381b46 ""
-  "g23_avolio_rodrigues.aux" 1716058526 2738 930f1984d27d3d1c5a9058a476cdd736 "pdflatex"
-  "g23_avolio_rodrigues.out" 1716058526 2562 20b992321f884cf3db7bc1572778456b "pdflatex"
-  "g23_avolio_rodrigues.tex" 1716058523 9124 59b20f9a9928a832c451cb7b46381b46 ""
+  "d:/Lovaion/University/2nd Year/Erasmus/Spoken Language Processing/Lab/Assignment2/Report/g23_avolio_rodrigues.tex" 1716060805 10043 d2d721bdc1c91b7543d9a6477d638b66 ""
+  "g23_avolio_rodrigues.aux" 1716060807 2804 96c93bac4a08a05bb6c2e88bac7c3f7d "pdflatex"
+  "g23_avolio_rodrigues.out" 1716060807 2562 20b992321f884cf3db7bc1572778456b "pdflatex"
+  "g23_avolio_rodrigues.tex" 1716060805 10043 d2d721bdc1c91b7543d9a6477d638b66 ""
   (generated)
   "g23_avolio_rodrigues.aux"
   "g23_avolio_rodrigues.log"
