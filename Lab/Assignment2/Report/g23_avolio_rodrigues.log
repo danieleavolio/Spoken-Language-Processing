@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  18 MAY 2024 20:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.9.6)  19 MAY 2024 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -373,7 +373,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \plainfootrulewidth=\dimen190
 \headwidth=\dimen191
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 16.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 17.
  (C:\Program Files\MiKTeX\tex/latex/graphics\color.sty
 Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
  (C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
@@ -381,36 +381,36 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
  (C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 16.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 17.
  (C:\Users\danie\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (g23_avolio_rodrigues.aux)
 \openout1 = `g23_avolio_rodrigues.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 16.
-LaTeX Font Info:    Trying to load font information for T3+cmr on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 17.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 17.
  (C:\Users\danie\AppData\Roaming\MiKTeX\tex/latex/tipa\t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count313
@@ -436,26 +436,17 @@ Package caption Info: End \AtBeginDocument code.
  (C:\Users\danie\AppData\Roaming\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 16.
-Package hyperref Info: Link coloring OFF on input line 16.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 17.
+Package hyperref Info: Link coloring OFF on input line 17.
  (g23_avolio_rodrigues.out) (g23_avolio_rodrigues.out)
 \@outlinefile=\write3
 \openout3 = `g23_avolio_rodrigues.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 18.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 19.
  (C:\Users\danie\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \vbox (badness 10000) detected at line 18
- []
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 29.
-
-
-Underfull \hbox (badness 7168) in paragraph at lines 56--58
-\OT1/ptm/m/n/9 Today's in-ter-con-nected world, ac-cu-rately pin-point-ing a
+Underfull \vbox (badness 10000) detected at line 19
  []
 
 [1{C:/Users/danie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
@@ -463,24 +454,19 @@ Underfull \hbox (badness 7168) in paragraph at lines 56--58
 
 
 ]
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 59.
-
-
-Underfull \hbox (badness 1173) in paragraph at lines 61--62
+Underfull \hbox (badness 1173) in paragraph at lines 116--124
 \OT1/ptm/m/n/9 X-vectors, de-rived from deep neu-ral net-works trained for
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 127.
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 127.
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (10.8013pt too wide) in paragraph at lines 65--79
+Overfull \hbox (10.8013pt too wide) in paragraph at lines 127--141
  [][] 
  []
 
@@ -490,45 +476,42 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `g23_avolio_rodrigues.out' has not changed.
-(rerunfilecheck)             Checksum: 20B992321F884CF3DB7BC1572778456B;2562.
+(rerunfilecheck)             Checksum: 9557792FF17125E4490A329791F97EC8;2214.
  ) 
 Here is how much of TeX's memory you used:
- 17159 strings out of 475503
- 328832 string characters out of 5771650
- 1938248 words of memory out of 5000000
- 38192 multiletter control sequences out of 15000+600000
+ 17157 strings out of 475503
+ 328732 string characters out of 5771650
+ 1939248 words of memory out of 5000000
+ 38191 multiletter control sequences out of 15000+600000
  576444 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,9n,107p,742b,899s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,9n,107p,482b,899s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{section.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.2} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsubsection.3.0.1} has been referenced but does not exist, replaced by a fixed one
-
-
 pdfTeX warning (dest): name{section.3} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsubsection.2.0.6} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.2.5} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsubsection.2.0.5} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.2.4} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsubsection.2.0.4} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.2.3} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsubsection.2.0.3} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.2.2} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsubsection.2.0.2} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.2.0.1} has been referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.2.1} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{section.2} has been referenced but does not exist, replaced by a fixed one
@@ -537,9 +520,9 @@ pdfTeX warning (dest): name{section.2} has been referenced but does not exist, r
 pdfTeX warning (dest): name{section.1} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on g23_avolio_rodrigues.pdf (2 pages, 67339 bytes).
+Output written on g23_avolio_rodrigues.pdf (2 pages, 67283 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 PDF objects out of 1000 (max. 8388607)
+ 12 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

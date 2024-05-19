@@ -209,8 +209,10 @@
         pdfkeywords={\@keywords},
       }
     \else
-         Anonymous submission to Interspeech 2024
-    \fi
+      Group 23    
+
+      \authorlist
+          \fi
 }
 
 \newcommand\anonaddress{

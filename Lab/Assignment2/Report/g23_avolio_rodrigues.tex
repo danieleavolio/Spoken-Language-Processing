@@ -1,119 +1,217 @@
 \documentclass{Interspeech2024}
 \usepackage{booktabs}
 
-\title{Speech Recognition and Classification}
+\title{SLP: Native Language Identification Challenge}
+% ADD authors
+
 
 % the order of authors here must exactly match the order entered into the paper submission system
 % note that the COMPLETE list of authors MUST be entered into the paper submission system at the outset, including when submitting your manuscript for double-blind review
-\name[affiliation={1,2}]{Daniele}{Avolio}
-\name[affiliation={3}]{Eduardo}{Rodrigues}
+\name[]{Daniele}{Avolio}
+\name[]{Eduardo}{Rodrigues}
 
 \email{danieleavolio14@gmail.com,eduardo.paz@tecnico.ulisboa.pt}
 
 \keywords{Speech Recognition, Speech Recognition, Native Language Identification}
 
-
 \begin{document}
 
 \maketitle
+  
 \section{Introduction}
 
-Speech recognition and classification have become essential technologies in human-computer interaction, offering natural and intuitive interfaces for various devices and applications. This study focuses on simulating a native language identification challenge, where participants receive training, development, and evaluation datasets, alongside baseline systems for closed-set identification of the native language of foreign English speakers. The target languages include Chinese, German, Hindi, and Italian.
+Speech recognition and classification have become essential technologies in
+human-computer interaction, offering natural and intuitive interfaces for
+various devices and applications. This study focuses on simulating a native
+language identification challenge, where participants receive training,
+development, and evaluation datasets, alongside baseline systems for closed-set
+identification of the native language of foreign English speakers. The target
+languages include Chinese, German, Hindi, and Italian.
 
-The objective is to develop the most effective native language identification system. During the initial phase, participants are required to understand and enhance a baseline system utilizing MFCC features and GMM models. In the subsequent phase, they will explore modern systems based on self-supervised learning. The project encourages innovation through the modification and combination of different systems to achieve optimal performance. Preliminary results demonstrate significant improvements in accuracy, showcasing the potential of advanced techniques in enhancing native language identification.
+The objective is to develop the most effective native language identification
+system. During the initial phase, participants are required to understand and
+enhance a baseline system utilizing MFCC features and GMM models. In the
+subsequent phase, they will explore modern systems based on self-supervised
+learning. The project encourages innovation through the modification and
+combination of different systems to achieve optimal performance. Preliminary
+results demonstrate significant improvements in accuracy, showcasing the
+potential of advanced techniques in enhancing native language identification.
 
 \section{Classical models based on conventional features}
 
-This section describes the basic system, which consists of MFCC feature extraction followed by GMM classification. MFCC feature extraction includes optional components such as Delta and Double-delta calculation, Shifted Delta Cepstrum (SDC), Voice Activity Detection (VAD) and Cepstral mean and variance normalisation (CMVN). GMMs use 64 dimensions for each language.
+This section describes the basic system, which consists of MFCC feature
+extraction followed by GMM classification. MFCC feature extraction includes
+optional components such as Delta and Double-delta calculation, Shifted Delta
+Cepstrum (SDC), Voice Activity Detection (VAD) and Cepstral mean and variance
+normalisation (CMVN). 
 
-\subsubsection{MFCC Feature Extraction}
+\subsection{MFCC Feature Extraction}
 
-At the heart of our baseline system lies the Mel-Frequency Cepstral Coefficients (MFCC) feature extraction process. The \textbf{feat\_extract} function encapsulates this process, providing a flexible framework for extracting MFCC features from audio files. Users can customize various parameters such as the number of MFCC coefficients, delta computation, Shifted Delta Cepstrum (SDC), Voice Activity Detection (VAD), and Cepstral Mean Variance Normalization (CMVN) based on their requirements.
+At the heart of our baseline system lies the Mel-Frequency Cepstral
+Coefficients (MFCC) feature extraction process. The \textbf{feat\_extract}
+function encapsulates this process, providing a flexible framework for
+extracting MFCC features from audio files. Users can customize various
+parameters such as the number of MFCC coefficients, delta computation, Shifted
+Delta Cepstrum (SDC), Voice Activity Detection (VAD), and Cepstral Mean
+Variance Normalization (CMVN) based on their requirements.
+
+\subsection{Optional methods for MFCC feature extraction}
+
+The optional methods for MFCC feature extraction include computing deltas,
+Shifted Delta Cepstrum (SDC), Voice Activity Detection (VAD), and Cepstral Mean
+Variance Normalization (CMVN). These methods enhance the quality of the extracted
+features and improve the performance of the language identification system.
+However, we didn't actually get very good results so probably there is something
+wrong with the implementation, but we couldn't manage to find what could have been wrong.
+Surely, we tested some combination of methods, and the most promising one was the
+VAD, followed by the CMVN.
 
 
-\subsubsection{Shifted Delta Cepstrum (SDC) Computation}
+\subsection{Model Training}
 
-One of the advanced feature extraction techniques discussed is the computation of Shifted Delta Cepstrum (SDC) features. SDC features offer an effective method to increase context in language recognition systems by concatenating delta and delta-delta features with neighboring frames. The\textbf{ compute\_sdc }function efficiently computes SDC features, enhancing the representation of context in language classification tasks.
+We employ a supervised learning approach to train language identification
+models using Gaussian Mixture Models (GMMs). For each native language in the
+dataset, we train a separate GMM model using the extracted features. The models
+learn the underlying distributions of features specific to each language and use
+this information to classify new audio samples. 
+The training process was quite fast, and we could train the models in a few
+minutes. We used the \textbf{train100} datasets to train the models, and we
+used the \textbf{dev} dataset, of course, to evaluate them. We even tried to use the \textbf{train}
+datasets, but it was taking too long to run some tests on it. On the \textit{System Optimization} section we will talk more about the training process.
 
 
-\subsubsection{Feature Extraction Pipeline Configuration}
+\subsection{Evaluation}
+To assess the performance of the language identification system, we evaluate it
+on a development set. This set contains audio samples with known ground truth
+labels. We measure metrics such as accuracy, precision, recall, and F1-score to
+quantify the system's performance across different languages. However, the
+result were not satisfactory, achieving a score of roughly 0.6 in the Kaggle
+competition. We believe that the problem was in the feature extraction, but we
+couldn't manage to find what was wrong. We tried to use different combinations
+of methods, but the results were always the same. We also tried to use the
+\textbf{train} datasets, but even with it the results were kind of the same, so probably 
+the problem was in the implementation.
 
-Configuring the feature extraction pipeline is crucial for seamless experimentation and optimization. The ETS class allows users to define different feature extraction configurations stored in the transform dictionary. Each configuration specifies parameters for MFCC feature extraction, enabling users to experiment with various settings and evaluate their impact on classification performance
-
-\subsubsection{Model Training}
-
- We employ a supervised learning approach to train language identification models using Gaussian Mixture Models (GMMs). For each native language in the dataset, we train a separate GMM model using the extracted features. The models learn the underlying distributions of features specific to each language.
-
-\subsubsection{Evaluation}
-To assess the performance of the language identification system, we evaluate it on a development set. This set contains audio samples with known ground truth labels. We measure metrics such as accuracy, precision, recall, and F1-score to quantify the system's performance across different languages.
-However, the result were not satisfactory, achieving a score of roughly 0.6 in the Kaggle competition.
-\subsubsection{System Optimization}
-Based on the evaluation results, we fine-tune the system parameters and explore techniques for improving classification accuracy. This may involve adjusting the number of Gaussian components in the GMMs, optimizing feature extraction parameters, or experimenting with alternative machine learning algorithms.
-In particular, we tried to estimate the best number of components for the GMMs using the Bayesian Information Criterion (BIC) and the Akaike Information Criterion (AIC). The process was very slow, so we did it only the first time, and then we used the best number of components for the following experiments.
-
+\subsection{System Optimization}
+Based on the evaluation results, we fine-tune the system parameters and explore
+techniques for improving classification accuracy. This may involve adjusting
+the number of Gaussian components in the GMMs, optimizing feature extraction
+parameters, or experimenting with alternative machine learning algorithms. In
+particular, we tried to estimate the best number of components for the GMMs
+using the Bayesian Information Criterion (BIC) and the Akaike Information
+Criterion (AIC). The process was very slow, so we did it only the first time,
+and then we used the best number of components for the following experiments.
 
 \section{Native Language Identification with Pre-trained Models}
-Today's interconnected world, accurately pinpointing a speaker's native language is crucial across many fields like speech processing, linguistics, and security. Native Language Identification (NLI) systems are essential for tasks such as language assessment, dialect classification, and automatic speech recognition.
-In this section, we explore two approaches to NLI using pre-trained models: x-vector based and self-supervised learning (SSL) based methods.
+In this section, we explore two approaches to NLI using
+pre-trained models: x-vector based and self-supervised learning (SSL) based
+methods. This is based on the second part of the project, where we were guided
+to use the s3prl toolkit to implement the SSL approach and to use pretrained 
+speaker embeddings with the x-vector based approach. We will discuss the results
+we got from the x-vector based approach and the problems we had with the SSL
+approach.
 
-\subsubsection{X-vector Based Approach}
+\subsection{X-vector Based Approach}
 
-X-vectors, derived from deep neural networks trained for speaker identification, have emerged as powerful embeddings for various speech processing tasks. In this section, we delve into the process of extracting x-vectors from audio data using pre-trained models. We demonstrate how to train a simple linear SVM classifier on top of these embeddings and evaluate its performance on a development set. Additionally, we experiment with alternative models like RandomForest, GradientBoosting, Logistic Regression, and KNN. The x-vector based approach yielded promising results on the development set.
+X-vectors, derived from deep neural networks trained for speaker
+identification, have emerged as powerful embeddings for various speech
+processing tasks. In this section, we delve into the process of extracting
+x-vectors from audio data using pre-trained models. We demonstrate how to train
+a simple linear SVM classifier on top of these embeddings and evaluate its
+performance on a development set. Additionally, we experiment with alternative
+models like \textbf{RandomForest, GradientBoosting, Logistic Regression, and KNN}. The
+x-vector based approach yielded promising results on the development set.
 
 \begin{table}[h!]
   \centering
   \begin{tabular}{lcccc}
-  \hline
-   & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
-  \hline
-  \textbf{CHI} & 0.76 & 0.87 & 0.81 & 39 \\
-  \textbf{GER} & 0.72 & 0.64 & 0.67 & 44 \\
-  \textbf{HIN} & 0.96 & 0.94 & 0.95 & 47 \\
-  \textbf{ITA} & 0.70 & 0.70 & 0.70 & 46 \\
-  \hline
-  \textbf{Accuracy} &  &  & 0.78 & 176 \\
-  \textbf{Macro Avg} & 0.78 & 0.78 & 0.78 & 176 \\
-  \textbf{Weighted Avg} & 0.78 & 0.78 & 0.78 & 176 \\
-  \hline
+    \hline
+                          & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+    \hline
+    \textbf{CHI}          & 0.76               & 0.87            & 0.81              & 39               \\
+    \textbf{GER}          & 0.72               & 0.64            & 0.67              & 44               \\
+    \textbf{HIN}          & 0.96               & 0.94            & 0.95              & 47               \\
+    \textbf{ITA}          & 0.70               & 0.70            & 0.70              & 46               \\
+    \hline
+    \textbf{Accuracy}     &                    &                 & 0.78              & 176              \\
+    \textbf{Macro Avg}    & 0.78               & 0.78            & 0.78              & 176              \\
+    \textbf{Weighted Avg} & 0.78               & 0.78            & 0.78              & 176              \\
+    \hline
   \end{tabular}
   \caption{Precision, Recall, F1-Score and Support for different languages}
   \label{table:metrics}
-  \end{table}
+\end{table}
 
-The best model was the Logistic Regression, with an overall score of 0.87. Compared to the GMM model, the x-vector based approach achieved a significant improvement in accuracy, precision, recall, and F1-score metrics.
-Note that this was the best result obtained using the transformation function \textbf{spkrec-ecapa-voxceleb} that should perform worse than \textbf{lang-id-voxlingua107-ecapa}.
+The best model was the Logistic Regression, with an overall score of 0.87.
+Compared to the GMM model, the x-vector based approach achieved a significant
+improvement in accuracy, precision, recall, and F1-score metrics. Note that
+this was the best result obtained using the transformation function
+\textbf{spkrec-ecapa-voxceleb} that should perform worse than
+\textbf{lang-id-voxlingua107-ecapa}. We believe that the results could be
+improved by using the \textbf{train} datasets, but the transformation function 
+\textbf{lang-id-voxlingua107-ecapa} was taking too long to run.
 
 \subsection{Self-Supervised Learning (SSL) Approach}
-The s3prl toolkit offers a suite of self-supervised pre-trained models for speech processing tasks. In this section, we explore how to leverage SSL models for NLI by fine-tuning them on our dataset. We discuss the downstream task setup and the architecture of the simple model used for NLI. Furthermore, we provide instructions for running scripts to utilize SSL models and save results for evaluation.
-The SSL approach using the s3prl toolkit provided competitive results:
+The s3prl toolkit offers a suite of self-supervised pre-trained models for
+speech processing tasks. In this section, we explore how to leverage SSL models
+for NLI by fine-tuning them on our dataset. We discuss the downstream task
+setup and the architecture of the simple model used for NLI. Furthermore, we
+provide instructions for running scripts to utilize SSL models and save results
+for evaluation. The SSL approach using the s3prl toolkit provided competitive
+results:
 \begin{table}[htbp]
   \centering
   \caption{Language Classification Metrics}
-    \begin{tabular}{lccc}
+  \begin{tabular}{lccc}
     \toprule
     Language & Precision (\%) & Recall (\%) & F1-score (\%) \\
     \midrule
-    CHI   & 76 & 87 & 81 \\
-    GER   & 72 & 64 & 67 \\
-    HIN   & 96 & 94 & 95 \\
-    ITA   & 70 & 70 & 70 \\
+    CHI      & 76             & 87          & 81            \\
+    GER      & 72             & 64          & 67            \\
+    HIN      & 96             & 94          & 95            \\
+    ITA      & 70             & 70          & 70            \\
     \midrule
-    Overall & & & 78.41 \\
+    Overall  &                &             & 78.41         \\
     \bottomrule
-    \end{tabular}%
+  \end{tabular}%
   \label{tab:metrics}%
 \end{table}%
 
-However we had some problems to run this, because I couldn't get this to work on Windows (I tried to run it on WSL, but it didn't work) and I don't know why. Unfortunately, I didn't have time to try to do more tests so we just kept the results we got from the lab when we did manage to run it throug Eduardo's computer.
+However we had some problems to run this, because I couldn't get this to work
+on Windows (I tried to run it on WSL, but it didn't work) and I don't know why.
+Unfortunately, I didn't have time to try to do more tests so we just kept the
+results we got from the lab when we did manage to run it throug Eduardo's
+computer. Since it's a very powerful tool, we believe that the results could be
+much better than the ones we got from the x-vector based approach if we had more time to 
+work on it.
 
 \section{Conclusion}
-The conclusion of this study highlights the evolution and diversity of approaches to native language identification, which are essential for a wide range of applications in human-computer interaction, language processing, and security.
+The conclusion of this study highlights the evolution and diversity of
+approaches to native language identification, which are essential for a wide
+range of applications in human-computer interaction, language processing, and
+security.
 
-Classical models, based on conventional features such as mel frequency cepstral coefficients (MFCC) and Gaussian mixture models (GMM), lay a solid foundation for native language identification. However, the introduction of more modern approaches, such as x-vectors and self-supervised learning (SSL), demonstrate significant advances in terms of performance.
+Classical models, based on conventional features such as mel frequency cepstral
+coefficients (MFCC) and Gaussian mixture models (GMM), lay a solid foundation
+for native language identification. However, it's clear that new approaches
+like x-vectors and self-supervised learning (SSL) models offer significantly better
+performance, as demonstrated by the results obtained in this project.
 
-Preliminary results reveal that the use of x-vectors and SSL models results in promising precision, recall and F1-score metrics, effectively competing with classical models in several target languages.
+Preliminary results reveal that the use of x-vectors and SSL models results in
+promising precision, recall and F1-score metrics, effectively competing with
+classical models in several target languages.
 
-The flexibility offered by modern approaches, such as the use of pre-trained models and self-supervised learning techniques, opens up new opportunities to improve native language identification systems, providing greater precision and adaptability to different application scenarios.
+It's clear that the future of native language identification lies in the
+exploration and integration of advanced techniques like x-vectors and SSL models,
+but it's also important to consider the computational resources and expertise
+required to implement these approaches effectively. Actually, the implementation 
+being guided made the process easier and it would have been much harder to do it
+manually and in this short amount of time.
 
-A very important note is that we did all our tests only on the \textbf{train100} datasets due to time constraints. We believe that the results could be improved by using the \textbf{train} datasets, but we did not have time to do it.
+A very important note is that we did all our tests only on the
+\textbf{train100} datasets due to time constraints. We believe that the results
+could be improved by using the \textbf{train} datasets, but it would have taken
+too long to run the tests. Maybe finding another transformation function 
+different from the \textbf{2} we used could have improved the results as well,
+going more specifically to the languages we were trying to identify.
 \end{document}
