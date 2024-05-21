@@ -68,7 +68,7 @@
 % also make sure not to mention Interspeech in the metadata in case authors place their review version of the PDF online
 \RequirePackage[
         pdfauthor={1,2},
-        pdftitle={Under review},
+        pdftitle={SLP: Native Language Identification Challenge},
         colorlinks=false,
 ]{hyperref}
 
