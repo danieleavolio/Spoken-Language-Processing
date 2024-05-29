@@ -13,3 +13,4 @@ IPython
 matplotlib
 librosa
 scipy
+num2words
